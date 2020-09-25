@@ -29,12 +29,14 @@
     
             }
             else{
+                menu.message=" ";
                 var promise=MenuSearchService.getItems(searchTerm);
                 promise.then(function(response){
                     if(response.length===0){
                         menu.message="Nothing found!!";
                     }
                     else{
+                        menu.message=" ";
                         menu.foundItem=response;
                     }
                        
